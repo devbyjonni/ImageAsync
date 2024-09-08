@@ -16,6 +16,8 @@
 		FABE6B6D2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B6C2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift */; };
 		FABE6B7A2C8E6B8C002F0F87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B792C8E6B8C002F0F87 /* README.md */; };
 		FABE6B7D2C8E6F74002F0F87 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */; };
+		FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */; };
+		FABE6B822C8E711E002F0F87 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FABE6B812C8E711E002F0F87 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		FABE6B6C2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsyncUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FABE6B792C8E6B8C002F0F87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABE6B822C8E711E002F0F87 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 			children = (
 				FABE6B512C8E6B7B002F0F87 /* HomeView.swift */,
 				FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */,
+				FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +162,9 @@
 			dependencies = (
 			);
 			name = ImageAsync;
+			packageProductDependencies = (
+				FABE6B812C8E711E002F0F87 /* Kingfisher */,
+			);
 			productName = ImageAsync;
 			productReference = FABE6B4C2C8E6B7B002F0F87 /* ImageAsync.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +237,9 @@
 				Base,
 			);
 			mainGroup = FABE6B432C8E6B7B002F0F87;
+			packageReferences = (
+				FABE6B802C8E711E002F0F87 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FABE6B4D2C8E6B7B002F0F87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABE6B522C8E6B7B002F0F87 /* HomeView.swift in Sources */,
+				FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */,
 				FABE6B7D2C8E6F74002F0F87 /* ImageModel.swift in Sources */,
 				FABE6B502C8E6B7B002F0F87 /* ImageAsyncApp.swift in Sources */,
 			);
@@ -604,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FABE6B802C8E711E002F0F87 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FABE6B812C8E711E002F0F87 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FABE6B802C8E711E002F0F87 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FABE6B442C8E6B7B002F0F87 /* Project object */;
 }
