@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var pageInfo: String = ""
+    @State private var selectedLoader: ImageLoaderType = .kingfisher
+    
     var body: some View {
-        VStack {
-            Text("Hello, HomeView!")
+        NavigationStack {
+            ImagesView(pageInfo: $pageInfo, loaderType: selectedLoader)
+                .overlay(alignment: .bottom, content: {
+                    Text(pageInfo)
+                        .foregroundStyle(.black)
+                        .fontWeight(.semibold)
+                        .frame(width: 250, height: 50)
+                        .background(.white.shadow(.drop(color: .black.opacity(0.25), radius: 5, x: 10, y: 10)), in: .rect(cornerRadius: 8))
+                        .padding()
+                })
+                .navigationTitle("ImageAsync")
         }
-        .padding()
     }
 }
 
