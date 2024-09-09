@@ -18,6 +18,7 @@
 		FABE6B7D2C8E6F74002F0F87 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */; };
 		FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */; };
 		FABE6B822C8E711E002F0F87 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FABE6B812C8E711E002F0F87 /* Kingfisher */; };
+		FABE6B862C8E733B002F0F87 /* ImageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B852C8E733B002F0F87 /* ImageCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FABE6B792C8E6B8C002F0F87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		FABE6B852C8E733B002F0F87 /* ImageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FABE6B512C8E6B7B002F0F87 /* HomeView.swift */,
+				FABE6B852C8E733B002F0F87 /* ImageCardView.swift */,
 				FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */,
 				FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */,
 			);
@@ -285,6 +288,7 @@
 			files = (
 				FABE6B522C8E6B7B002F0F87 /* HomeView.swift in Sources */,
 				FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */,
+				FABE6B862C8E733B002F0F87 /* ImageCardView.swift in Sources */,
 				FABE6B7D2C8E6F74002F0F87 /* ImageModel.swift in Sources */,
 				FABE6B502C8E6B7B002F0F87 /* ImageAsyncApp.swift in Sources */,
 			);
