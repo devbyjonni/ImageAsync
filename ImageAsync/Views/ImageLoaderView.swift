@@ -8,18 +8,13 @@
 import SwiftUI
 import Kingfisher
 
-enum ImageLoaderType: String, CaseIterable {
-    case kingfisher = "Kingfisher"
-}
-
+/// Kingfisher: Great for SwiftUI and if you need extensive customization options, such as transformations.
+/// https://github.com/onevcat/Kingfisher
 struct ImageLoaderView: View {
     var imageUrl: URL
-    var loaderType: ImageLoaderType
     let size: CGSize
     
     var body: some View {
-        /// Kingfisher: Great for SwiftUI and if you need extensive customization options, such as transformations.
-        /// https://github.com/onevcat/Kingfisher
         KFImage(imageUrl)
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -31,7 +26,7 @@ struct ImageLoaderView: View {
 #Preview {
     VStack {
         if let validUrl = URL(string: "https://picsum.photos/256") {
-            ImageLoaderView(imageUrl: validUrl, loaderType: .kingfisher, size: CGSize(width: 100, height: 100))
+            ImageLoaderView(imageUrl: validUrl, size: CGSize(width: 100, height: 100))
         } else {
             Text("Invalid URL")
         }

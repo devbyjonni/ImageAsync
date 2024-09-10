@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ImageCardView: View {
     var imageModel: ImageModel
-    var loaderType: ImageLoaderType
     
     var body: some View {
         GeometryReader { geometry in
             let size = geometry.size
             VStack(alignment: .leading, spacing: 10, content: {
                 if let validUrl = imageModel.imageURL {
-                    ImageLoaderView(imageUrl: validUrl, loaderType: loaderType, size: size)
+                    ImageLoaderView(imageUrl: validUrl, size: size)
                 } else {
                     Text("No image available")
                         .foregroundStyle(.gray)

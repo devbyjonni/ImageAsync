@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAB064832C90A4C000643FF1 /* MockImages.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB064822C90A4C000643FF1 /* MockImages.json */; };
 		FABE6B502C8E6B7B002F0F87 /* ImageAsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B4F2C8E6B7B002F0F87 /* ImageAsyncApp.swift */; };
 		FABE6B522C8E6B7B002F0F87 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B512C8E6B7B002F0F87 /* HomeView.swift */; };
 		FABE6B542C8E6B7D002F0F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B532C8E6B7D002F0F87 /* Assets.xcassets */; };
 		FABE6B572C8E6B7D002F0F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B562C8E6B7D002F0F87 /* Preview Assets.xcassets */; };
-		FABE6B612C8E6B7D002F0F87 /* ImageAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B602C8E6B7D002F0F87 /* ImageAsyncTests.swift */; };
 		FABE6B6B2C8E6B7D002F0F87 /* ImageAsyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B6A2C8E6B7D002F0F87 /* ImageAsyncUITests.swift */; };
 		FABE6B6D2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B6C2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift */; };
 		FABE6B7A2C8E6B8C002F0F87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B792C8E6B8C002F0F87 /* README.md */; };
@@ -19,7 +19,9 @@
 		FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */; };
 		FABE6B822C8E711E002F0F87 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FABE6B812C8E711E002F0F87 /* Kingfisher */; };
 		FABE6B862C8E733B002F0F87 /* ImageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B852C8E733B002F0F87 /* ImageCardView.swift */; };
-		FABE6B882C8E740D002F0F87 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B872C8E740D002F0F87 /* ImagesView.swift */; };
+		FABE6B882C8E740D002F0F87 /* ImagesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B872C8E740D002F0F87 /* ImagesGridView.swift */; };
+		FABF59582C8FAA2C00D0E2A6 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF59572C8FAA2C00D0E2A6 /* NetworkingManagerTests.swift */; };
+		FABF595A2C8FAAF800D0E2A6 /* ImagesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF59592C8FAAF800D0E2A6 /* ImagesServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAB064822C90A4C000643FF1 /* MockImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockImages.json; sourceTree = "<group>"; };
 		FABE6B4C2C8E6B7B002F0F87 /* ImageAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE6B4F2C8E6B7B002F0F87 /* ImageAsyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsyncApp.swift; sourceTree = "<group>"; };
 		FABE6B512C8E6B7B002F0F87 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FABE6B532C8E6B7D002F0F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABE6B562C8E6B7D002F0F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FABE6B5C2C8E6B7D002F0F87 /* ImageAsyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageAsyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FABE6B602C8E6B7D002F0F87 /* ImageAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsyncTests.swift; sourceTree = "<group>"; };
 		FABE6B662C8E6B7D002F0F87 /* ImageAsyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageAsyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE6B6A2C8E6B7D002F0F87 /* ImageAsyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsyncUITests.swift; sourceTree = "<group>"; };
 		FABE6B6C2C8E6B7D002F0F87 /* ImageAsyncUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsyncUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -54,7 +56,9 @@
 		FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 		FABE6B852C8E733B002F0F87 /* ImageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardView.swift; sourceTree = "<group>"; };
-		FABE6B872C8E740D002F0F87 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
+		FABE6B872C8E740D002F0F87 /* ImagesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGridView.swift; sourceTree = "<group>"; };
+		FABF59572C8FAA2C00D0E2A6 /* NetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTests.swift; sourceTree = "<group>"; };
+		FABF59592C8FAAF800D0E2A6 /* ImagesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FABE6B792C8E6B8C002F0F87 /* README.md */,
+				FAB064822C90A4C000643FF1 /* MockImages.json */,
 				FABE6B4E2C8E6B7B002F0F87 /* ImageAsync */,
 				FABE6B5F2C8E6B7D002F0F87 /* ImageAsyncTests */,
 				FABE6B692C8E6B7D002F0F87 /* ImageAsyncUITests */,
@@ -126,7 +131,8 @@
 		FABE6B5F2C8E6B7D002F0F87 /* ImageAsyncTests */ = {
 			isa = PBXGroup;
 			children = (
-				FABE6B602C8E6B7D002F0F87 /* ImageAsyncTests.swift */,
+				FABF59572C8FAA2C00D0E2A6 /* NetworkingManagerTests.swift */,
+				FABF59592C8FAAF800D0E2A6 /* ImagesServiceTests.swift */,
 			);
 			path = ImageAsyncTests;
 			sourceTree = "<group>";
@@ -144,10 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				FABE6B512C8E6B7B002F0F87 /* HomeView.swift */,
-				FABE6B872C8E740D002F0F87 /* ImagesView.swift */,
+				FABE6B872C8E740D002F0F87 /* ImagesGridView.swift */,
 				FABE6B852C8E733B002F0F87 /* ImageCardView.swift */,
-				FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */,
 				FABE6B7E2C8E704E002F0F87 /* ImageLoaderView.swift */,
+				FABE6B7C2C8E6F74002F0F87 /* ImageModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				FABE6B7A2C8E6B8C002F0F87 /* README.md in Resources */,
 				FABE6B572C8E6B7D002F0F87 /* Preview Assets.xcassets in Resources */,
 				FABE6B542C8E6B7D002F0F87 /* Assets.xcassets in Resources */,
+				FAB064832C90A4C000643FF1 /* MockImages.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +298,7 @@
 			files = (
 				FABE6B522C8E6B7B002F0F87 /* HomeView.swift in Sources */,
 				FABE6B7F2C8E704E002F0F87 /* ImageLoaderView.swift in Sources */,
-				FABE6B882C8E740D002F0F87 /* ImagesView.swift in Sources */,
+				FABE6B882C8E740D002F0F87 /* ImagesGridView.swift in Sources */,
 				FABE6B862C8E733B002F0F87 /* ImageCardView.swift in Sources */,
 				FABE6B7D2C8E6F74002F0F87 /* ImageModel.swift in Sources */,
 				FABE6B502C8E6B7B002F0F87 /* ImageAsyncApp.swift in Sources */,
@@ -302,7 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABE6B612C8E6B7D002F0F87 /* ImageAsyncTests.swift in Sources */,
+				FABF59582C8FAA2C00D0E2A6 /* NetworkingManagerTests.swift in Sources */,
+				FABF595A2C8FAAF800D0E2A6 /* ImagesServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
