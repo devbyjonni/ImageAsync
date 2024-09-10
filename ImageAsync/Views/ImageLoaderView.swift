@@ -17,7 +17,6 @@ struct ImageLoaderView: View {
         KFImage(imageUrl)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

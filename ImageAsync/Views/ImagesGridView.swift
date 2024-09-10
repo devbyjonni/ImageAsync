@@ -4,9 +4,7 @@
 //
 //  Created by Jonni Akesson on 2024-09-09.
 //
-// I think your current approach strikes a great balance between simplicity and flexibility, making it both easy to test and to extend in the future!
 
-import Foundation
 import SwiftUI
 
 // MARK: - ImagesGridView
