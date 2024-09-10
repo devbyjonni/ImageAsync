@@ -12,10 +12,13 @@ import SwiftUI
 // MARK: - ImagesGridView
 struct ImagesGridView: View {
     @StateObject var vm = ImagesGridViewModel()
+
+    let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: UIDevice.current.userInterfaceIdiom == .pad ? 4 : 3)
+
     
     var body: some View {
         ScrollView(.vertical) {
-            LazyVGrid(columns: Array(repeating: GridItem(spacing: 10), count: 3), spacing: 10) {
+            LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(vm.images) { image in
                     ImageCardView(imageModel: image)
                         .onAppear {

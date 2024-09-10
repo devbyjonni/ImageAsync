@@ -8,26 +8,25 @@
 import SwiftUI
 
 struct ImageCardView: View {
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     var imageModel: ImageModel
     
     var body: some View {
-        GeometryReader { geometry in
-            let size = geometry.size
-            VStack(alignment: .leading, spacing: 10, content: {
-                if let validUrl = imageModel.imageURL {
-                    ImageLoaderView(imageUrl: validUrl, size: size)
-                } else {
-                    Text("No image available")
-                        .foregroundStyle(.gray)
-                        .font(.caption)
-                }
-                Text(imageModel.author)
-                    .font(.caption)
+        VStack(alignment: .leading, spacing: 10, content: {
+            if let validUrl = imageModel.imageURL {
+                ImageLoaderView(imageUrl: validUrl)
+            } else {
+                Text("No image available")
                     .foregroundStyle(.gray)
-                    .lineLimit(1)
-            })
-        }
-        .frame(height: 200)
+                    .font(.caption)
+            }
+            
+            Text(imageModel.author)
+                .font(.title)
+                .textScale(UIDevice.current.userInterfaceIdiom == .pad  ? .default : .secondary)
+                .foregroundStyle(.gray)
+                .lineLimit(1)
+        })
     }
 }
 

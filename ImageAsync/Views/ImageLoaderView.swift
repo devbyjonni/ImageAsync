@@ -12,13 +12,12 @@ import Kingfisher
 /// https://github.com/onevcat/Kingfisher
 struct ImageLoaderView: View {
     var imageUrl: URL
-    let size: CGSize
     
     var body: some View {
         KFImage(imageUrl)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: size.width, height: size.width)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
@@ -26,7 +25,7 @@ struct ImageLoaderView: View {
 #Preview {
     VStack {
         if let validUrl = URL(string: "https://picsum.photos/256") {
-            ImageLoaderView(imageUrl: validUrl, size: CGSize(width: 100, height: 100))
+            ImageLoaderView(imageUrl: validUrl)
         } else {
             Text("Invalid URL")
         }
