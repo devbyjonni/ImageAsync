@@ -19,15 +19,13 @@ import Foundation
  }
  */
 
-
-
-struct ImageModel: Identifiable, Decodable {
+struct ImageModel: Identifiable, Codable {
     let id: String
     let author: String
     let url: String
     let downloadURL: String
 
-    // Add a manual initializer for testing
+    // Add a manual initializer for testing (XCTestCase)
     init(id: String, author: String, url: String, downloadURL: String) {
         self.id = id
         self.author = author
@@ -35,7 +33,6 @@ struct ImageModel: Identifiable, Decodable {
         self.downloadURL = downloadURL
     }
     
-    // Decodable conformance remains intact for real API responses
     private enum CodingKeys: String, CodingKey {
         case id
         case author

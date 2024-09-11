@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ImageCardView: View {
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     var imageModel: ImageModel
     
     var body: some View {
