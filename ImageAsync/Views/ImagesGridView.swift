@@ -11,7 +11,7 @@ import SwiftUI
 struct ImagesGridView: View {
     @StateObject var vm = ImagesGridViewModel()
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2)
+    let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: UIDevice.current.userInterfaceIdiom == .pad ? 3 : 2)
 
     var body: some View {
         ScrollView(.vertical) {

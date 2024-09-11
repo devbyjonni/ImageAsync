@@ -132,21 +132,15 @@ class ImagesService: BaseAPIService<[ImageModel]>, APIService {
             return try await performRequest(for: page, pageLimit: pageLimit, method: .GET)
         case .bundle(let name):
             return try loadFromBundle(bundleName: name)
-            
         }
     }
     
     private func loadFromBundle(bundleName: String) throws -> [ImageModel] {
-        guard let url = Bundle.main.url(forResource: bundleName, withExtension: "json") else {
-            throw ServiceError.invalidURL
-        }
-        
-        if let data = try bundleManager?.loadJSONData(from: bundleName) {
-            return try decode(data)
-        } else {
-            let data = try Data(contentsOf: url)
-            return try decode(data)
-        }
+        // Ensure the bundleManager is set (default to DefaultBundleManager if nil)
+        let bundleManager = self.bundleManager ?? DefaultBundleManager()
+        let data = try bundleManager.loadJSONData(from: bundleName)
+ 
+        return try decode(data)
     }
 }
 // MARK: - BaseAPIService
@@ -167,10 +161,15 @@ class BaseAPIService<T: Decodable> {
             throw ServiceError.invalidURL
         }
         
-        let (data, response) = try await networkManager.performRequest(request)
-        try networkManager.validateResponse(response)
-        
-        return try decode(data)
+        do {
+            let (data, response) = try await networkManager.performRequest(request)
+            try networkManager.validateResponse(response)
+            return try decode(data)
+        } catch let error as NetworkError {
+            throw ServiceError.networkError(error)
+        } catch {
+            throw ServiceError.unknownError(error.localizedDescription)
+        }
     }
     
     func decode(_ data: Data) throws -> T {
@@ -219,8 +218,7 @@ class NetworkManager: Network {
     
     func performRequest(_ request: URLRequest) async throws -> (Data, URLResponse) {
         do {
-            let (data, response) = try await session.data(for: request)
-            return (data, response)
+            return try await session.data(for: request)
         } catch {
             throw NetworkError.networkFailure("Failed to execute request.")
         }

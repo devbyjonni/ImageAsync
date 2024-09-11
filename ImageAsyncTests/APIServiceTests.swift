@@ -79,7 +79,7 @@ final class APIServiceTests: XCTestCase {
         do {
             _ = try await service.performFetch(for: 1, pageLimit: 30, source: .api)
             XCTFail("Expected network failure but succeeded.")
-        } catch let error as NetworkError {
+        } catch let error as ServiceError {
             XCTAssertEqual(error.localizedDescription, "Network failure: Network error")
         }
     }
