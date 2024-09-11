@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - APIRequestBuilder Protocol
 protocol APIRequestBuilder {
     func buildRequest(for page: Int, pageLimit: Int, method: HTTPMethod) -> URLRequest?

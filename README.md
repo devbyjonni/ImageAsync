@@ -12,35 +12,35 @@
 
 ## Architecture Overview
 
-The project follows a modular architecture where key components are separated into distinct layers for better maintainability and testing. 
+The project follows a modular architecture where key components are separated into distinct layers for better maintainability and testing.
 
 ### Key Components:
 
-1. **ImagesGridViewModel**
+1. **PhotosGridViewModel**
    - Handles the logic of loading images from either an API or a local bundle.
    - Manages pagination and error handling.
-   - Exposes the necessary state for the `ImagesGridView`.
+   - Exposes the necessary state for the `PhotosGridView`.
 
-2. **APIService & ImagesService**
+2. **APIService & BaseAPIService**
    - Abstracted service layer for handling data fetching.
    - Supports fetching from an API or local JSON bundle.
 
 3. **NetworkManager**
-   - Handles all networking requests, ensuring modularity and testability.
+   - Manages all networking requests, ensuring modularity and testability.
    - Validates network responses and throws appropriate errors.
 
 4. **BundleManager**
-   - Manages loading of local JSON data from the app bundle.
+   - Handles loading local JSON data from the app bundle.
 
 ## Testing Strategy
 
 The code is designed with testability in mind, using dependency injection to allow easy mocking of services and network requests.
 
-### 1. **ImagesGridViewModel Testing**
+### 1. **PhotosGridViewModel Testing**
    - **Test Success with API Data:**
      Mock the `APIService` to simulate successful image loading from the API. Assert that the `images` array is populated and `isLoading` is set to `false` after the fetch.
    - **Test Success with Bundle Data:**
-     Mock the `APIService` to load data from the local bundle (`TestImages.json`). Verify that the bundle data is loaded properly into the `images` array.
+     Mock the `APIService` to load data from the local bundle (`TestPicsumPhotos.json`). Verify that the bundle data is loaded properly into the `images` array.
    - **Test Failure Cases:**
      Simulate failure scenarios (e.g., network errors, decoding issues) and ensure `viewModelError` is set correctly, and `isLoading` is `false` after the failure.
 
@@ -48,7 +48,7 @@ The code is designed with testability in mind, using dependency injection to all
    - **Test API Fetching:**
      Mock the network response to simulate successful and failed API requests. Validate that the `performFetch` method returns the correct data or throws the expected errors.
    - **Test Bundle Fetching:**
-     Ensure that the `performFetch` method can correctly load data from a JSON file in the app bundle. Test both success and failure cases (e.g., missing file, corrupted data).
+     Ensure that the `performFetch` method correctly loads data from a JSON file in the app bundle. Test both success and failure cases (e.g., missing file, corrupted data).
 
 ### 3. **NetworkManager Testing**
    - **Test Network Request Execution:**
@@ -60,26 +60,10 @@ The code is designed with testability in mind, using dependency injection to all
    - **Test JSON Loading:**
      Simulate loading JSON data from the app bundle. Ensure that the data is correctly parsed and returned as expected. Test failure scenarios like missing or corrupted files, and validate that appropriate errors are thrown.
 
-## Installation
-
-Clone the repository and open it with Xcode. Ensure you have Xcode 15 or later installed.
-
-```bash
-git clone https://github.com/yourusername/ImageAsync.git
-cd ImageAsync
-open ImageAsync.xcodeproj
-```
-
-## Usage
-
-To run the app, simply build and run it in the iOS simulator or on a physical device. Images will be fetched asynchronously and displayed in a grid.
-
 ## Future Improvements
 
-- Add support for more image sources (e.g., remote databases).
-- Enhance error handling to provide more detailed user feedback.
+- Enhance the testing strategy.
+- Provide more detailed user feedback in error handling.
 - Improve the UI for iPad with adaptive layouts.
+- Add support for more image sources (e.g., remote databases).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

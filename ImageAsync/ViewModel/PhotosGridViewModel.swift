@@ -1,5 +1,5 @@
 //
-//  ImagesGridViewModel.swift
+//  PhotosGridViewModel.swift
 //  ImageAsync
 //
 //  Created by Jonni Akesson on 2024-09-10.
@@ -7,51 +7,49 @@
 
 import Foundation
 
-// MARK: - ImagesGridViewModel
 @MainActor
-final class ImagesGridViewModel: ObservableObject {
-    @Published var images: [ImageModel] = []
+final class PhotosGridViewModel: ObservableObject {
+    @Published var picsumPhotos: [PicsumPhoto] = []
     @Published var isLoading = false
     @Published var viewModelError: ViewModelError?
     
     private(set) var service: APIService
-    private(set) var numberOfImagesPerPage = 30
+    private(set) var numberOfItemsPerPage = 30
     private(set) var currentPage = 1
-    private(set) var lastImages = false
+    private(set) var lastItem = false
     
-    init(service: ImagesService = ImagesService(
+    init(service: PicsumPhotosService = PicsumPhotosService(
         networkManager: NetworkManager(),
-        requestBuilder: ImagesRequestBuilder())
+        requestBuilder: PicsumPhotosRequestBuilder())
     ) {
         self.service = service
-        loadImages()
+        loadData()
     }
     
-    func loadImages() {
-        guard !isLoading && !lastImages else { return }
+    func loadData() {
+        guard !isLoading && !lastItem else { return }
         
         isLoading = true
         viewModelError = nil
         
         Task {
             do {
-                let fetchedImages = try await service.performFetch(for: currentPage, pageLimit: numberOfImagesPerPage, source: .api)
-                processFetchedImages(fetchedImages)
+                let fetchedPhotos = try await service.performFetch(for: currentPage, pageLimit: numberOfItemsPerPage, source: .api)
+                processFetchedPhotos(fetchedPhotos)
             } catch {
                 handleFetchError(error)
             }
         }
     }
     
-    private func processFetchedImages(_ newImages: [ImageModel]) {
-        images.append(contentsOf: newImages)
+    private func processFetchedPhotos(_ newPhotos: [PicsumPhoto]) {
+        picsumPhotos.append(contentsOf: newPhotos)
         
-        // Check if the fetched images are equal to the expected page size (e.g., 30)
-        if newImages.count == numberOfImagesPerPage {
+        // Check if the fetched photos are equal to the expected page size (e.g., 30)
+        if newPhotos.count == numberOfItemsPerPage {
             currentPage += 1  // Increment page number after successful fetch
         } else {
-            // If fewer images are returned, assume it's the last page
-            lastImages = true
+            lastItem = true
         }
         
         isLoading = false  // Reset the loading state

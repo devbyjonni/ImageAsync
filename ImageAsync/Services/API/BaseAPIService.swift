@@ -7,6 +7,10 @@
 
 import Foundation
 
+// MARK: - APIService Protocol
+protocol APIService {
+    func performFetch(for page: Int, pageLimit: Int, source: DataSource) async throws -> [PicsumPhoto]
+}
 // MARK: - BaseAPIService
 class BaseAPIService<T: Decodable> {
     let networkManager: Network

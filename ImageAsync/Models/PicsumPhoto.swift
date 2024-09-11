@@ -1,5 +1,5 @@
 //
-//  ImageModel.swift
+//  PicsumPhoto.swift
 //  ImageAsync
 //
 //  Created by Jonni Akesson on 2024-09-09.
@@ -19,7 +19,7 @@ import Foundation
  }
  */
 
-struct ImageModel: Identifiable, Codable {
+struct PicsumPhoto: Identifiable, Codable {
     let id: String
     let author: String
     let url: String
@@ -40,7 +40,7 @@ struct ImageModel: Identifiable, Codable {
         case downloadURL = "download_url"
     }
     
-    var imageURL: URL? {
+    var photoURL: URL? {
         URL(string: "https://picsum.photos/id/\(id)/256/256.jpg")
     }
 }

@@ -11,8 +11,8 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            ImagesGridView()
-                .navigationTitle("ImagesGridView")
+            PhotosGridView()
+                .navigationTitle("PhotosGridView")
         }
     }
 }
