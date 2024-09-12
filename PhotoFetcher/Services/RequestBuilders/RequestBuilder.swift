@@ -1,5 +1,5 @@
 //
-//  APIRequestBuilder.swift
+//  RequestBuilder.swift
 //  PhotoFetcher
 //
 //  Created by Jonni Akesson on 2024-09-11.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol APIRequestBuilder {
+protocol RequestBuilder {
     
     /// Builds a `URLRequest` for fetching photos with pagination and optional HTTP headers.
     ///

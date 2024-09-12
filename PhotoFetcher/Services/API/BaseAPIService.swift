@@ -9,10 +9,9 @@ import Foundation
 
 class BaseAPIService<T: Decodable>: APIService {
     let networkManager: Network
-    let requestBuilder: APIRequestBuilder
-    typealias Model = T
+    let requestBuilder: RequestBuilder
     
-    init(networkManager: Network, requestBuilder: APIRequestBuilder) {
+    init(networkManager: Network, requestBuilder: RequestBuilder) {
         self.networkManager = networkManager
         self.requestBuilder = requestBuilder
     }

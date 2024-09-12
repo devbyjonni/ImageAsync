@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PicsumPhotosRequestBuilder: APIRequestBuilder {
+class PicsumPhotosRequestBuilder: RequestBuilder {
     private let baseURL: String
     
     init(baseURL: String = "https://picsum.photos") {

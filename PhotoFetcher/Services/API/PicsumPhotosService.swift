@@ -10,7 +10,8 @@ import Foundation
 class PicsumPhotosService: BaseAPIService<[PicsumPhoto]> {
     
     init() {
-        let networkManager = NetworkManager()
+        let defaultSession = SessionBuilder().withDefaultConfiguration().build()
+        let networkManager = NetworkManager(session: defaultSession)
         let requestBuilder = PicsumPhotosRequestBuilder()
         super.init(networkManager: networkManager, requestBuilder: requestBuilder)
     }
