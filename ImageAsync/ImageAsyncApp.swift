@@ -27,7 +27,7 @@ final class DependencyContainer: ObservableObject {
     var viewModel: PhotosGridViewModel
     
     init() {
-        let apiService = PicsumPhotosService(
+        let apiService = PhotoService(
             networkManager: NetworkManager(),
             requestBuilder: PicsumPhotosRequestBuilder()
         )
