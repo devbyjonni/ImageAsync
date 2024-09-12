@@ -23,18 +23,18 @@ struct PhotoFetcherApp: App {
 final class DependencyContainer: ObservableObject {
     let apiService: any APIService
     let persistenceService: PersistenceService
-    let photoRepository: PhotoRepository
+    let picsumPhotoRepository: Repository
     var viewModel: PhotosGridViewModel
     
     init() {
         let defaultSession = SessionBuilder().withDefaultConfiguration().build()
         let apiService = PicsumPhotosService()
         let persistenceService = CoreDataService()
-        let photoRepository = DefaultPhotoRepository(apiService: apiService, persistenceService: persistenceService)
+        let picsumPhotoRepository = PicsumPhotoRepository(apiService: apiService, persistenceService: persistenceService)
         
         self.apiService = apiService
         self.persistenceService = persistenceService
-        self.photoRepository = photoRepository
-        self.viewModel = PhotosGridViewModel(photoRepository: photoRepository)
+        self.picsumPhotoRepository = picsumPhotoRepository
+        self.viewModel = PhotosGridViewModel(picsumPhotosService: picsumPhotoRepository)
     }
 }

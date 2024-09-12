@@ -1,5 +1,5 @@
 //
-//  DefaultPhotoRepository.swift
+//  PicsumPhotoRepository.swift
 //  PhotoFetcher
 //
 //  Created by Jonni Akesson on 2024-09-12.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class DefaultPhotoRepository: PhotoRepository {
-    private let apiService: PicsumPhotosService  // Make sure it's specific to PicsumPhotosService
+class PicsumPhotoRepository: Repository {
+    private let apiService: PicsumPhotosService 
     private let persistenceService: PersistenceService
 
     init(apiService: PicsumPhotosService, persistenceService: PersistenceService) {

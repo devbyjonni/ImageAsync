@@ -13,13 +13,13 @@ final class PhotosGridViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var viewModelError: ViewModelError?
     
-    private let photoRepository: PhotoRepository
+    private let picsumPhotosService: Repository
     private(set) var numberOfItemsPerPage = 30
     private(set) var currentPage = 1
     private(set) var lastItem = false
     
-    init(photoRepository: PhotoRepository) {
-        self.photoRepository = photoRepository
+    init(picsumPhotosService: Repository) {
+        self.picsumPhotosService = picsumPhotosService
         loadData()
     }
     
@@ -31,7 +31,7 @@ final class PhotosGridViewModel: ObservableObject {
         
         Task {
             do {
-                let photos = try await photoRepository.fetchPhotos(page: currentPage, pageLimit: 30)
+                let photos = try await picsumPhotosService.fetchPhotos(page: currentPage, pageLimit: 30)
                 processFetchedPhotos(photos)
             } catch {
                 handleFetchError(error)
