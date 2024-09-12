@@ -1,6 +1,6 @@
-# ImageAsync
+# PhotoFetch
 
-**ImageAsync** is a SwiftUI project that asynchronously loads and displays images in a grid format. The app supports fetching images from an API and storing them locally, allowing for offline capabilities and efficient data handling.
+**PhotoFetch** is a SwiftUI project that asynchronously loads and displays images in a grid format. The app supports fetching images from an API and storing them locally, allowing for offline capabilities and efficient data handling.
 
 ## Features
 
