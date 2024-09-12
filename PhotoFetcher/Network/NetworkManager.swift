@@ -10,7 +10,6 @@ import Foundation
 class NetworkManager: Network {
     private let session: URLSession
 
-    // Add a default URLSession if none is passed (for production)
     init(session: URLSession = .shared) {
         self.session = session
     }

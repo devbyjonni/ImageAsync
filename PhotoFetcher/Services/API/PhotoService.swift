@@ -30,6 +30,7 @@ class PhotoService: APIService {
 
     // Private method to handle API requests
     private func performRequest(for page: Int, pageLimit: Int, method: HTTPMethod) async throws -> [PicsumPhoto] {
+        // Omit the headers parameter if not needed, as it defaults to `nil`
         guard let request = requestBuilder.buildRequest(for: page, pageLimit: pageLimit, method: method) else {
             throw ServiceError.invalidURL
         }
@@ -44,6 +45,7 @@ class PhotoService: APIService {
             throw ServiceError.unknownError(error.localizedDescription)
         }
     }
+
 
     // Private method to handle bundle loading
     private func loadFromBundle(bundleName: String) throws -> [PicsumPhoto] {

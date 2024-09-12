@@ -27,12 +27,12 @@ final class DependencyContainer: ObservableObject {
     var viewModel: PhotosGridViewModel
     
     init() {
-        let apiService = PhotoService(
-            networkManager: NetworkManager(),
-            requestBuilder: PicsumPhotosRequestBuilder()
-        )
+        let defaultSession = SessionBuilder().withDefaultConfiguration().build()
+        let networkManager = NetworkManager(session: defaultSession)
+        let apiService = PhotoService(networkManager: networkManager, requestBuilder: PicsumPhotosRequestBuilder())
         let persistenceService = CoreDataService()
         let photoRepository = DefaultPhotoRepository(apiService: apiService, persistenceService: persistenceService)
+        
         self.apiService = apiService
         self.persistenceService = persistenceService
         self.photoRepository = photoRepository

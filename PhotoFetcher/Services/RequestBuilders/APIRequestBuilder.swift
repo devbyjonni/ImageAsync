@@ -8,5 +8,6 @@
 import Foundation
 
 protocol APIRequestBuilder {
+    func buildRequest(for page: Int, pageLimit: Int, method: HTTPMethod, headers: [String: String]?) -> URLRequest?
     func buildRequest(for page: Int, pageLimit: Int, method: HTTPMethod) -> URLRequest?
 }
