@@ -8,10 +8,10 @@
 import Foundation
 
 class DefaultPhotoRepository: PhotoRepository {
-    private let apiService: APIService
+    private let apiService: PicsumPhotosService  // Make sure it's specific to PicsumPhotosService
     private let persistenceService: PersistenceService
 
-    init(apiService: APIService, persistenceService: PersistenceService) {
+    init(apiService: PicsumPhotosService, persistenceService: PersistenceService) {
         self.apiService = apiService
         self.persistenceService = persistenceService
     }
@@ -28,7 +28,7 @@ class DefaultPhotoRepository: PhotoRepository {
         }
 
         // Fallback to API if no local data
-        let fetchedPhotos = try await apiService.performFetch(for: page, pageLimit: pageLimit, source: .api)
+        let fetchedPhotos = try await apiService.fetchPicsumPhotos(page: page, pageLimit: pageLimit)
         try persistenceService.savePhotos(fetchedPhotos)
         return fetchedPhotos
     }

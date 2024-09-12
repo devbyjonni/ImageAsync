@@ -8,5 +8,6 @@
 import Foundation
 
 protocol APIService {
-    func performFetch(for page: Int, pageLimit: Int, source: DataSource) async throws -> [PicsumPhoto]
+    associatedtype Model: Decodable
+    func performRequest(for page: Int, pageLimit: Int, method: HTTPMethod) async throws -> Model
 }
