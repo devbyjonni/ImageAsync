@@ -7,11 +7,6 @@
 
 import Foundation
 
-// MARK: - APIService Protocol
-protocol APIService {
-    func performFetch(for page: Int, pageLimit: Int, source: DataSource) async throws -> [PicsumPhoto]
-}
-// MARK: - BaseAPIService
 class BaseAPIService<T: Decodable> {
     let networkManager: Network
     let requestBuilder: APIRequestBuilder
@@ -45,26 +40,6 @@ class BaseAPIService<T: Decodable> {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
             throw ServiceError.decodingError("Failed to decode data")
-        }
-    }
-}
-// MARK: - ServiceError
-enum ServiceError: Error {
-    case networkError(NetworkError)  // Wrap NetworkError for clarity
-    case decodingError(String)
-    case unknownError(String)
-    case invalidURL
-    
-    var localizedDescription: String {
-        switch self {
-        case .networkError(let networkingError):
-            return networkingError.localizedDescription
-        case .decodingError(let message):
-            return "Decoding Error: \(message)"
-        case .unknownError(let message):
-            return "Unknown Error: \(message)"
-        case .invalidURL:
-            return "The URL provided is invalid."
         }
     }
 }

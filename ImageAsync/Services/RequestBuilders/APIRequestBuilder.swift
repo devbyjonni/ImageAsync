@@ -7,11 +7,6 @@
 
 import Foundation
 
-// MARK: - APIRequestBuilder Protocol
 protocol APIRequestBuilder {
     func buildRequest(for page: Int, pageLimit: Int, method: HTTPMethod) -> URLRequest?
-}
-// MARK: - HTTPMethod Enum
-enum HTTPMethod: String {
-    case GET, POST, PUT, DELETE
 }

@@ -29,6 +29,6 @@ struct PhotoCardView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

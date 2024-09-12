@@ -7,13 +7,6 @@
 
 import Foundation
 
-// MARK: - Network Protocol
-protocol Network {
-    func performRequest(_ request: URLRequest) async throws -> (Data, URLResponse)
-    func validateResponse(_ response: URLResponse) throws
-}
-
-// MARK: - NetworkManager
 class NetworkManager: Network {
     private let session: URLSession
 
@@ -37,21 +30,6 @@ class NetworkManager: Network {
 
         guard (200...299).contains(httpResponse.statusCode) else {
             throw NetworkError.invalidResponse(httpResponse.statusCode)
-        }
-    }
-}
-
-// MARK: - NetworkError
-enum NetworkError: Error, Equatable {
-    case networkFailure(String)
-    case invalidResponse(Int)
-    
-    var localizedDescription: String {
-        switch self {
-        case .networkFailure(let message):
-            return "Network failure: \(message)"
-        case .invalidResponse(let statusCode):
-            return "Invalid response with status code: \(statusCode)"
         }
     }
 }

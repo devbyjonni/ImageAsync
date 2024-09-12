@@ -13,16 +13,13 @@ final class PhotosGridViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var viewModelError: ViewModelError?
     
-    private(set) var service: APIService
+    private let photoRepository: PhotoRepository
     private(set) var numberOfItemsPerPage = 30
     private(set) var currentPage = 1
     private(set) var lastItem = false
     
-    init(service: PicsumPhotosService = PicsumPhotosService(
-        networkManager: NetworkManager(),
-        requestBuilder: PicsumPhotosRequestBuilder())
-    ) {
-        self.service = service
+    init(photoRepository: PhotoRepository) {
+        self.photoRepository = photoRepository
         loadData()
     }
     
@@ -34,8 +31,8 @@ final class PhotosGridViewModel: ObservableObject {
         
         Task {
             do {
-                let fetchedPhotos = try await service.performFetch(for: currentPage, pageLimit: numberOfItemsPerPage, source: .api)
-                processFetchedPhotos(fetchedPhotos)
+                let photos = try await photoRepository.fetchPhotos(page: currentPage, pageLimit: 30)
+                processFetchedPhotos(photos)
             } catch {
                 handleFetchError(error)
             }
@@ -64,27 +61,6 @@ final class PhotosGridViewModel: ObservableObject {
             viewModelError = .genericError(serviceError.localizedDescription)
         default:
             viewModelError = .genericError("An unknown error occurred.")
-        }
-    }
-}
-// MARK: - ViewModelError
-enum ViewModelError: Identifiable {
-    case networkError(String)
-    case genericError(String)
-    
-    var id: String {
-        switch self {
-        case .networkError(let message), .genericError(let message):
-            return message
-        }
-    }
-    
-    var errorMessage: String {
-        switch self {
-        case .networkError(let message):
-            return "Network issue: \(message). Please check your connection."
-        case .genericError(let message):
-            return "Oops! Something went wrong: \(message)."
         }
     }
 }

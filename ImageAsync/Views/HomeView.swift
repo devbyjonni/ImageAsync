@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     var body: some View {
         NavigationStack {
             PhotosGridView()
@@ -18,5 +18,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+     HomeView()
+        .environmentObject(DependencyContainer().viewModel)
 }

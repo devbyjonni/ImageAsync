@@ -8,28 +8,29 @@
 import SwiftUI
 
 struct PhotosGridView: View {
-    @StateObject var vm = PhotosGridViewModel()
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @EnvironmentObject var viewModel: PhotosGridViewModel
+
     let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: UIDevice.current.userInterfaceIdiom == .pad ? 3 : 2)
 
     var body: some View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(vm.picsumPhotos) { photo in
+                ForEach(viewModel.picsumPhotos) { photo in
                     PhotoCardView(picsumPhoto: photo)
                         .onAppear {
                             // When the last photo appears, trigger pagination
-                            if photo.id == vm.picsumPhotos.last?.id {
-                                vm.loadData()
+                            if photo.id == viewModel.picsumPhotos.last?.id {
+                                viewModel.loadData()
                             }
                         }
                 }
             }
             .overlay(alignment: .bottom, content: {
-                if vm.isLoading {
+                if viewModel.isLoading {
                     ProgressView()
                         .offset(y: 30)
-                } else if vm.lastItem {
+                } else if viewModel.lastItem {
                     Text("No more photos available")
                         .foregroundColor(.gray)
                         .offset(y: 30)
@@ -38,7 +39,7 @@ struct PhotosGridView: View {
             .padding(15)
             .padding(.bottom, 15)
         }
-        .alert(item: $vm.viewModelError) { error in
+        .alert(item: $viewModel.viewModelError) { error in
             Alert(
                 title: Text(error.errorMessage),
                 message: Text(""),
@@ -46,4 +47,9 @@ struct PhotosGridView: View {
             )
         }
     }
+}
+
+#Preview {
+     HomeView()
+        .environmentObject(DependencyContainer().viewModel)
 }
