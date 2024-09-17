@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -98,6 +98,10 @@
 		FAE0943F2C9A42B300F701BD /* PicsumPhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoListView.swift; sourceTree = "<group>"; };
 		FAE094412C9A42C800F701BD /* PicsumPhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FAE094452C9A43A100F701BD /* FavoritesManager */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FavoritesManager; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FABE6B492C8E6B7B002F0F87 /* Frameworks */ = {
@@ -251,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				FABE6B4F2C8E6B7B002F0F87 /* PhotoFetchApp.swift */,
+				FAE094452C9A43A100F701BD /* FavoritesManager */,
 				FAA2DDC42C91E249005DD57D /* Network */,
 				FAA2DDBE2C91E206005DD57D /* Services */,
 				FA9B54892C930F5F00A7A7F9 /* Repositories */,
@@ -309,6 +314,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FAE094452C9A43A100F701BD /* FavoritesManager */,
 			);
 			name = PhotoFetcher;
 			packageProductDependencies = (
