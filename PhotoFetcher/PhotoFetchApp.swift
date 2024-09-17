@@ -6,34 +6,64 @@
 //
 
 import SwiftUI
+import os.log
 
 @main
 struct PhotoFetcherApp: App {
-    @StateObject private var container = DependencyContainer()
-    
+    @Environment(\.scenePhase) var scenePhase
+
+    init() {
+        LogMessages.appDidLaunch(functionName: #function)
+    }
+
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environmentObject(container.viewModel)
+            MainView()
+                .onAppear {
+                    LogMessages.mainViewDisplayed(functionName: #function)
+                }
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            switch newPhase {
+            case .active:
+                LogMessages.appBecameActive(functionName: #function)
+            case .inactive:
+                LogMessages.appBecameInactive(functionName: #function)
+            case .background:
+                LogMessages.appEnteredBackground(functionName: #function)
+            default:
+                break
+            }
         }
     }
 }
 
-@MainActor
 final class DependencyContainer: ObservableObject {
-    let apiService: any APIService
-    let persistenceService: PersistenceService
-    let picsumPhotoRepository: Repository
-    var viewModel: PhotosGridViewModel
-    
+    private(set) var repository: PhotoRepository
+
     init() {
-        let apiService = PicsumPhotosService()
-        let persistenceService = CoreDataService()
-        let picsumPhotoRepository = PicsumPhotoRepository(apiService: apiService, persistenceService: persistenceService)
+        LogMessages.dependencyContainerInit(functionName: #function)
         
-        self.apiService = apiService
-        self.persistenceService = persistenceService
-        self.picsumPhotoRepository = picsumPhotoRepository
-        self.viewModel = PhotosGridViewModel(picsumPhotosService: picsumPhotoRepository)
+        let requestBuilder = RequestBuilder()
+        let sessionBuilder = SessionBuilder()
+        let session = sessionBuilder.buildForegroundSession()
+        let networkManager = NetworkManager(session: session)
+        let paginatedFetcher = PaginatedFetcher(requestBuilder: requestBuilder,
+                                                networkManager: networkManager)
+        
+        let apiService = PhotoAPIService(fetcher: paginatedFetcher,
+                                         requestBuilder: requestBuilder,
+                                         networkManager: networkManager)
+        
+        self.repository = PhotoRepository(apiService: apiService)
+    }
+}
+
+// MARK: - DependencyContainer Logging
+extension LogMessages {
+    static let dependencyLogger = Logger(subsystem: "com.yourapp.dependency", category: "DependencyContainer")
+    
+    static func dependencyContainerInit(functionName: String = #function) {
+        dependencyLogger.info("[\(functionName)] - DependencyContainer has been initialized.")
     }
 }
