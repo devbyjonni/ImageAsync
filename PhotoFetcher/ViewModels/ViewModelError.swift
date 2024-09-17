@@ -1,9 +1,3 @@
-//
-//  ViewModelError.swift
-//  PhotoFetcher
-//
-//  Created by Jonni Akesson on 2024-09-12.
-//
 
 import Foundation
 
@@ -18,12 +12,22 @@ enum ViewModelError: Identifiable {
         }
     }
     
-    var errorMessage: String {
+    var title: String {
+        switch self {
+        case .networkError:
+            return "Network Error"
+        case .genericError:
+            return "Oops! Something went wrong"
+        }
+    }
+    
+    var message: String {
         switch self {
         case .networkError(let message):
-            return "Network issue: \(message). Please check your connection."
+            return "It looks like there’s a network issue: \(message). Please check your internet connection and try again."
         case .genericError(let message):
-            return "Oops! Something went wrong: \(message)."
+            return "Something went wrong: \(message). Please try again later or contact support if the issue persists."
         }
     }
 }
+
