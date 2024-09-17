@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA2DE6612C93440C00A99164 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA2DE6602C93440C00A99164 /* Kingfisher */; };
-		FA9B54722C930B5F00A7A7F9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54712C930B5F00A7A7F9 /* Network.swift */; };
-		FA9B54742C930B8200A7A7F9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54732C930B8200A7A7F9 /* NetworkError.swift */; };
 		FA9B54762C930BC200A7A7F9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54752C930BC200A7A7F9 /* APIService.swift */; };
 		FA9B54782C930C5500A7A7F9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54772C930C5500A7A7F9 /* ServiceError.swift */; };
 		FA9B547C2C930CF100A7A7F9 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B547B2C930CF100A7A7F9 /* CoreDataService.swift */; };
@@ -62,8 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA9B54712C930B5F00A7A7F9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		FA9B54732C930B8200A7A7F9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FA9B54752C930BC200A7A7F9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FA9B54772C930C5500A7A7F9 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		FA9B547B2C930CF100A7A7F9 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -172,10 +168,8 @@
 		FAA2DDC42C91E249005DD57D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FA9B54712C930B5F00A7A7F9 /* Network.swift */,
 				FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */,
 				FADB7D382C934D7D00B6BC37 /* SessionBuilder.swift */,
-				FA9B54732C930B8200A7A7F9 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -440,7 +434,6 @@
 				FA9B548F2C930FEE00A7A7F9 /* ViewModelError.swift in Sources */,
 				FADB7D392C934D7D00B6BC37 /* SessionBuilder.swift in Sources */,
 				FABE6B522C8E6B7B002F0F87 /* HomeView.swift in Sources */,
-				FA9B54742C930B8200A7A7F9 /* NetworkError.swift in Sources */,
 				FA9B54882C930DF400A7A7F9 /* BundleError.swift in Sources */,
 				FA9B54822C930D1C00A7A7F9 /* PersistenceService.swift in Sources */,
 				FABE6B7F2C8E704E002F0F87 /* PhotoLoaderView.swift in Sources */,
@@ -449,7 +442,6 @@
 				FA9B54862C930DD400A7A7F9 /* DefaultBundleManager.swift in Sources */,
 				FA9B54782C930C5500A7A7F9 /* ServiceError.swift in Sources */,
 				FAA2DDC12C91E228005DD57D /* PicsumPhotosService.swift in Sources */,
-				FA9B54722C930B5F00A7A7F9 /* Network.swift in Sources */,
 				FAB064872C90F72B00643FF1 /* PhotosGridViewModel.swift in Sources */,
 				FABE6B882C8E740D002F0F87 /* PhotosGridView.swift in Sources */,
 				FA9B54802C930D0B00A7A7F9 /* KeychainService.swift in Sources */,
