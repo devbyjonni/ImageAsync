@@ -15,7 +15,6 @@
 		FA9B54822C930D1C00A7A7F9 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54812C930D1C00A7A7F9 /* PersistenceService.swift */; };
 		FA9B54842C930D7E00A7A7F9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54832C930D7E00A7A7F9 /* HTTPMethod.swift */; };
 		FA9B548B2C930F7700A7A7F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B548A2C930F7700A7A7F9 /* Repository.swift */; };
-		FA9B548D2C930F8700A7A7F9 /* PicsumPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B548C2C930F8700A7A7F9 /* PicsumPhotoRepository.swift */; };
 		FA9B548F2C930FEE00A7A7F9 /* ViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B548E2C930FEE00A7A7F9 /* ViewModelError.swift */; };
 		FAA2DDC32C91E23F005DD57D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */; };
 		FAA2DDCA2C91E287005DD57D /* BundleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDC92C91E287005DD57D /* BundleManager.swift */; };
@@ -61,7 +60,6 @@
 		FA9B54812C930D1C00A7A7F9 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		FA9B54832C930D7E00A7A7F9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		FA9B548A2C930F7700A7A7F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		FA9B548C2C930F8700A7A7F9 /* PicsumPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoRepository.swift; sourceTree = "<group>"; };
 		FA9B548E2C930FEE00A7A7F9 /* ViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelError.swift; sourceTree = "<group>"; };
 		FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FAA2DDC92C91E287005DD57D /* BundleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleManager.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				FA9B548A2C930F7700A7A7F9 /* Repository.swift */,
-				FA9B548C2C930F8700A7A7F9 /* PicsumPhotoRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -431,7 +428,6 @@
 				FA9B548B2C930F7700A7A7F9 /* Repository.swift in Sources */,
 				FA9B54842C930D7E00A7A7F9 /* HTTPMethod.swift in Sources */,
 				FABE6B7D2C8E6F74002F0F87 /* PicsumPhoto.swift in Sources */,
-				FA9B548D2C930F8700A7A7F9 /* PicsumPhotoRepository.swift in Sources */,
 				FABE6B502C8E6B7B002F0F87 /* PhotoFetchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
