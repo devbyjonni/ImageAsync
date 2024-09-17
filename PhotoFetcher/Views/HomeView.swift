@@ -1,23 +1,33 @@
-//
-//  HomeView.swift
-//  PhotoFetcher
-//
-//  Created by Jonni Akesson on 2024-09-09.
-//
-
 import SwiftUI
+import os.log
 
-struct HomeView: View {
-
+struct MainView: View {
+    
+    init() {
+        LogMessages.mainViewInit(functionName: #function)
+    }
+    
     var body: some View {
-        NavigationStack {
-            PhotosGridView()
-                .navigationTitle("PhotosGridView")
+        TabView {
+            PicsumPhotoGridView(viewModel: PicsumPhotoGridViewModel(dependency: DependencyContainer()))
+                .tabItem {
+                    Label("GridView", systemImage: "photo.on.rectangle")
+                }
+            PicsumPhotoListView(viewModel: PicsumPhotoListViewModel(dependency: DependencyContainer()))
+                .tabItem {
+                    Label("ListView", systemImage: "photo.on.rectangle")
+                }
         }
     }
 }
 
-#Preview {
-     HomeView()
-        .environmentObject(DependencyContainer().viewModel)
+// MARK: - MainView Logging
+extension LogMessages {
+    static let mainViewLogger = Logger(subsystem: "com.yourapp.ui", category: "MainView")
+    
+    static func mainViewInit(functionName: String = #function) {
+        mainViewLogger.info("[\(functionName)] - MainView has been initialized.")
+    }
 }
+
+
