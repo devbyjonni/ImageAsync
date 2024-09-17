@@ -162,13 +162,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		FAA2DDD02C91E2D7005DD57D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		FAA2DDD52C91E5A8005DD57D /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +230,6 @@
 				FAE094452C9A43A100F701BD /* FavoritesManager */,
 				FAE094512C9A47E900F701BD /* Data */,
 				FAA2DDBE2C91E206005DD57D /* Services */,
-				FAA2DDD02C91E2D7005DD57D /* Helpers */,
 				FAA2DDCB2C91E291005DD57D /* Utilities */,
 				FAE094502C9A471C00F701BD /* LogMessages */,
 				FAB0648B2C90F80200643FF1 /* MockData */,
@@ -351,7 +343,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					FABE6B4B2C8E6B7B002F0F87 = {
 						CreatedOnToolsVersion = 15.4;
@@ -663,7 +655,6 @@
 		FABE6B742C8E6B7D002F0F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -683,7 +674,6 @@
 		FABE6B752C8E6B7D002F0F87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -703,7 +693,6 @@
 		FABE6B772C8E6B7D002F0F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XN6MYS666M;
@@ -721,7 +710,6 @@
 		FABE6B782C8E6B7D002F0F87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XN6MYS666M;
