@@ -14,10 +14,7 @@
 		FA9B54802C930D0B00A7A7F9 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B547F2C930D0B00A7A7F9 /* KeychainService.swift */; };
 		FA9B54822C930D1C00A7A7F9 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54812C930D1C00A7A7F9 /* PersistenceService.swift */; };
 		FA9B54842C930D7E00A7A7F9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B54832C930D7E00A7A7F9 /* HTTPMethod.swift */; };
-		FA9B548B2C930F7700A7A7F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B548A2C930F7700A7A7F9 /* Repository.swift */; };
-		FAA2DDC32C91E23F005DD57D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */; };
 		FAA2DDCA2C91E287005DD57D /* BundleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDC92C91E287005DD57D /* BundleManager.swift */; };
-		FAA2DDCF2C91E2C9005DD57D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDCE2C91E2C9005DD57D /* DataSource.swift */; };
 		FAA2DDD42C91E585005DD57D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2DDD32C91E585005DD57D /* RequestBuilder.swift */; };
 		FAB064832C90A4C000643FF1 /* TestPicsumPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB064822C90A4C000643FF1 /* TestPicsumPhotos.json */; };
 		FAB064872C90F72B00643FF1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB064862C90F72B00643FF1 /* BaseViewModel.swift */; };
@@ -28,20 +25,17 @@
 		FABE6B572C8E6B7D002F0F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B562C8E6B7D002F0F87 /* Preview Assets.xcassets */; };
 		FABE6B7A2C8E6B8C002F0F87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FABE6B792C8E6B8C002F0F87 /* README.md */; };
 		FABE6B7D2C8E6F74002F0F87 /* PicsumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABE6B7C2C8E6F74002F0F87 /* PicsumPhoto.swift */; };
-		FADB7D392C934D7D00B6BC37 /* SessionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7D382C934D7D00B6BC37 /* SessionBuilder.swift */; };
 		FAE0942C2C9A3F5400F701BD /* PicsumPhotoGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0942B2C9A3F5400F701BD /* PicsumPhotoGridViewModel.swift */; };
 		FAE0942E2C9A3F6E00F701BD /* PicsumPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0942D2C9A3F6E00F701BD /* PicsumPhotoListViewModel.swift */; };
 		FAE094302C9A3F8600F701BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0942F2C9A3F8600F701BD /* ViewModel.swift */; };
 		FAE094322C9A3FA300F701BD /* ViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094312C9A3FA300F701BD /* ViewModelError.swift */; };
 		FAE094342C9A3FB600F701BD /* ViewModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094332C9A3FB600F701BD /* ViewModelHelper.swift */; };
-		FAE094362C9A3FE600F701BD /* LogMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094352C9A3FE600F701BD /* LogMessages.swift */; };
 		FAE094382C9A424700F701BD /* PicsumPhotoAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094372C9A424700F701BD /* PicsumPhotoAlertView.swift */; };
 		FAE0943A2C9A426400F701BD /* PicsumPhotoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094392C9A426400F701BD /* PicsumPhotoCardView.swift */; };
 		FAE0943C2C9A427C00F701BD /* PicsumPhotoFavoriteToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0943B2C9A427C00F701BD /* PicsumPhotoFavoriteToggleButton.swift */; };
 		FAE0943E2C9A429C00F701BD /* PicsumPhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0943D2C9A429C00F701BD /* PicsumPhotoGridView.swift */; };
 		FAE094402C9A42B300F701BD /* PicsumPhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0943F2C9A42B300F701BD /* PicsumPhotoListView.swift */; };
 		FAE094422C9A42C800F701BD /* PicsumPhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094412C9A42C800F701BD /* PicsumPhotoLoader.swift */; };
-		FAE094492C9A44C300F701BD /* PaginatedFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE094482C9A44C300F701BD /* PaginatedFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +62,7 @@
 		FA9B547F2C930D0B00A7A7F9 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		FA9B54812C930D1C00A7A7F9 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		FA9B54832C930D7E00A7A7F9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		FA9B548A2C930F7700A7A7F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FAA2DDC92C91E287005DD57D /* BundleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleManager.swift; sourceTree = "<group>"; };
-		FAA2DDCE2C91E2C9005DD57D /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FAA2DDD32C91E585005DD57D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		FAB064822C90A4C000643FF1 /* TestPicsumPhotos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestPicsumPhotos.json; sourceTree = "<group>"; };
 		FAB064862C90F72B00643FF1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -85,24 +76,25 @@
 		FABE6B662C8E6B7D002F0F87 /* PhotoFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABE6B792C8E6B8C002F0F87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FABE6B7C2C8E6F74002F0F87 /* PicsumPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhoto.swift; sourceTree = "<group>"; };
-		FADB7D382C934D7D00B6BC37 /* SessionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionBuilder.swift; sourceTree = "<group>"; };
 		FAE0942B2C9A3F5400F701BD /* PicsumPhotoGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoGridViewModel.swift; sourceTree = "<group>"; };
 		FAE0942D2C9A3F6E00F701BD /* PicsumPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoListViewModel.swift; sourceTree = "<group>"; };
 		FAE0942F2C9A3F8600F701BD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FAE094312C9A3FA300F701BD /* ViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelError.swift; sourceTree = "<group>"; };
 		FAE094332C9A3FB600F701BD /* ViewModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelHelper.swift; sourceTree = "<group>"; };
-		FAE094352C9A3FE600F701BD /* LogMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessages.swift; sourceTree = "<group>"; };
 		FAE094372C9A424700F701BD /* PicsumPhotoAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoAlertView.swift; sourceTree = "<group>"; };
 		FAE094392C9A426400F701BD /* PicsumPhotoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoCardView.swift; sourceTree = "<group>"; };
 		FAE0943B2C9A427C00F701BD /* PicsumPhotoFavoriteToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoFavoriteToggleButton.swift; sourceTree = "<group>"; };
 		FAE0943D2C9A429C00F701BD /* PicsumPhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoGridView.swift; sourceTree = "<group>"; };
 		FAE0943F2C9A42B300F701BD /* PicsumPhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoListView.swift; sourceTree = "<group>"; };
 		FAE094412C9A42C800F701BD /* PicsumPhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoLoader.swift; sourceTree = "<group>"; };
-		FAE094482C9A44C300F701BD /* PaginatedFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FAE094452C9A43A100F701BD /* FavoritesManager */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FavoritesManager; sourceTree = "<group>"; };
+		FAE0944E2C9A45DE00F701BD /* Fetching */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Fetching; sourceTree = "<group>"; };
+		FAE0944F2C9A46C200F701BD /* Session */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Session; sourceTree = "<group>"; };
+		FAE094502C9A471C00F701BD /* LogMessages */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LogMessages; sourceTree = "<group>"; };
+		FAE094512C9A47E900F701BD /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,21 +134,14 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		FA9B54892C930F5F00A7A7F9 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				FA9B548A2C930F7700A7A7F9 /* Repository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		FAA2DDBE2C91E206005DD57D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FAE0944F2C9A46C200F701BD /* Session */,
+				FAE0944E2C9A45DE00F701BD /* Fetching */,
 				FAA2DDBF2C91E216005DD57D /* API */,
 				FA9B547A2C930CCE00A7A7F9 /* Persistence */,
-				FAA2DDD52C91E5A8005DD57D /* RequestBuilders */,
-				FAA2DDCB2C91E291005DD57D /* Bundle */,
+				FAA2DDD52C91E5A8005DD57D /* Request */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,38 +154,28 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		FAA2DDC42C91E249005DD57D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				FAA2DDC22C91E23F005DD57D /* NetworkManager.swift */,
-				FADB7D382C934D7D00B6BC37 /* SessionBuilder.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		FAA2DDCB2C91E291005DD57D /* Bundle */ = {
+		FAA2DDCB2C91E291005DD57D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				FAA2DDC92C91E287005DD57D /* BundleManager.swift */,
 			);
-			path = Bundle;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		FAA2DDD02C91E2D7005DD57D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FAA2DDCE2C91E2C9005DD57D /* DataSource.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		FAA2DDD52C91E5A8005DD57D /* RequestBuilders */ = {
+		FAA2DDD52C91E5A8005DD57D /* Request */ = {
 			isa = PBXGroup;
 			children = (
 				FAA2DDD32C91E585005DD57D /* RequestBuilder.swift */,
 				FA9B54832C930D7E00A7A7F9 /* HTTPMethod.swift */,
 			);
-			path = RequestBuilders;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		FAB064882C90F74C00643FF1 /* ViewModels */ = {
@@ -212,7 +187,6 @@
 				FAE0942F2C9A3F8600F701BD /* ViewModel.swift */,
 				FAE094312C9A3FA300F701BD /* ViewModelError.swift */,
 				FAE094332C9A3FB600F701BD /* ViewModelHelper.swift */,
-				FAE094352C9A3FE600F701BD /* LogMessages.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -257,15 +231,15 @@
 			isa = PBXGroup;
 			children = (
 				FABE6B4F2C8E6B7B002F0F87 /* PhotoFetchApp.swift */,
-				FAE094482C9A44C300F701BD /* PaginatedFetcher.swift */,
-				FAE094452C9A43A100F701BD /* FavoritesManager */,
-				FAA2DDC42C91E249005DD57D /* Network */,
-				FAA2DDBE2C91E206005DD57D /* Services */,
-				FA9B54892C930F5F00A7A7F9 /* Repositories */,
-				FAB064882C90F74C00643FF1 /* ViewModels */,
 				FABE6B7B2C8E6BD0002F0F87 /* Views */,
+				FAB064882C90F74C00643FF1 /* ViewModels */,
 				FAB064892C90F76900643FF1 /* Models */,
+				FAE094452C9A43A100F701BD /* FavoritesManager */,
+				FAE094512C9A47E900F701BD /* Data */,
+				FAA2DDBE2C91E206005DD57D /* Services */,
 				FAA2DDD02C91E2D7005DD57D /* Helpers */,
+				FAA2DDCB2C91E291005DD57D /* Utilities */,
+				FAE094502C9A471C00F701BD /* LogMessages */,
 				FAB0648B2C90F80200643FF1 /* MockData */,
 				FABE6B532C8E6B7D002F0F87 /* Assets.xcassets */,
 				FABE6B552C8E6B7D002F0F87 /* Preview Content */,
@@ -320,6 +294,10 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FAE094452C9A43A100F701BD /* FavoritesManager */,
+				FAE0944E2C9A45DE00F701BD /* Fetching */,
+				FAE0944F2C9A46C200F701BD /* Session */,
+				FAE094502C9A471C00F701BD /* LogMessages */,
+				FAE094512C9A47E900F701BD /* Data */,
 			);
 			name = PhotoFetcher;
 			packageProductDependencies = (
@@ -447,15 +425,11 @@
 				FAE0942E2C9A3F6E00F701BD /* PicsumPhotoListViewModel.swift in Sources */,
 				FAE0943C2C9A427C00F701BD /* PicsumPhotoFavoriteToggleButton.swift in Sources */,
 				FA9B54762C930BC200A7A7F9 /* APIService.swift in Sources */,
-				FAE094492C9A44C300F701BD /* PaginatedFetcher.swift in Sources */,
-				FADB7D392C934D7D00B6BC37 /* SessionBuilder.swift in Sources */,
 				FAE094422C9A42C800F701BD /* PicsumPhotoLoader.swift in Sources */,
 				FABE6B522C8E6B7B002F0F87 /* MainView.swift in Sources */,
 				FAE0943A2C9A426400F701BD /* PicsumPhotoCardView.swift in Sources */,
 				FA9B54822C930D1C00A7A7F9 /* PersistenceService.swift in Sources */,
 				FAE094402C9A42B300F701BD /* PicsumPhotoListView.swift in Sources */,
-				FAA2DDCF2C91E2C9005DD57D /* DataSource.swift in Sources */,
-				FAA2DDC32C91E23F005DD57D /* NetworkManager.swift in Sources */,
 				FAB064872C90F72B00643FF1 /* BaseViewModel.swift in Sources */,
 				FA9B54802C930D0B00A7A7F9 /* KeychainService.swift in Sources */,
 				FAE094322C9A3FA300F701BD /* ViewModelError.swift in Sources */,
@@ -466,10 +440,8 @@
 				FA9B547C2C930CF100A7A7F9 /* CoreDataService.swift in Sources */,
 				FAA2DDCA2C91E287005DD57D /* BundleManager.swift in Sources */,
 				FAA2DDD42C91E585005DD57D /* RequestBuilder.swift in Sources */,
-				FA9B548B2C930F7700A7A7F9 /* Repository.swift in Sources */,
 				FAE094342C9A3FB600F701BD /* ViewModelHelper.swift in Sources */,
 				FA9B54842C930D7E00A7A7F9 /* HTTPMethod.swift in Sources */,
-				FAE094362C9A3FE600F701BD /* LogMessages.swift in Sources */,
 				FAE094382C9A424700F701BD /* PicsumPhotoAlertView.swift in Sources */,
 				FABE6B7D2C8E6F74002F0F87 /* PicsumPhoto.swift in Sources */,
 				FABE6B502C8E6B7B002F0F87 /* PhotoFetchApp.swift in Sources */,

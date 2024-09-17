@@ -67,3 +67,30 @@ extension LogMessages {
         dependencyLogger.info("[\(functionName)] - DependencyContainer has been initialized.")
     }
 }
+
+
+// MARK: - ProtocolTestApp Logging
+extension LogMessages {
+    static let appLogger = Logger(subsystem: "com.yourapp.app", category: "AppLifecycle")
+    
+    static func appDidLaunch(functionName: String = #function) {
+        appLogger.info("[\(functionName)] - App has launched.")
+    }
+    
+    static func mainViewDisplayed(functionName: String = #function) {
+        appLogger.info("[\(functionName)] - MainView has been displayed.")
+    }
+    
+    static func appBecameActive(functionName: String = #function) {
+        appLogger.info("[\(functionName)] - App became active.")
+    }
+
+    static func appBecameInactive(functionName: String = #function) {
+        appLogger.info("[\(functionName)] - App became inactive.")
+    }
+    
+    static func appEnteredBackground(functionName: String = #function) {
+        appLogger.info("[\(functionName)] - App entered background.")
+    }
+}
+
