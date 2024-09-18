@@ -1,21 +1,6 @@
 import Foundation
 import os.log
 
-enum RequestBuilderError: Error, Equatable {
-    case invalidURL(String)
-    
-    var localizedDescription: String {
-        switch self {
-        case .invalidURL(let urlString):
-            return "Invalid URL: \(urlString)"
-        }
-    }
-}
-
-protocol RequestBuilding {
-    func buildRequest(for page: Int, pageLimit: Int, method: HTTPMethod) throws -> URLRequest
-}
-
 struct RequestBuilder: RequestBuilding {
     private let baseURL: String
     
@@ -59,5 +44,3 @@ extension LogMessages {
         requestBuilderLogger.debug("[\(functionName)] - Successfully built request: \(urlString)")
     }
 }
-
-

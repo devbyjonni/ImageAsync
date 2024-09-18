@@ -1,11 +1,6 @@
+
 import Foundation
 import os.log
-
-protocol SessionBuilding {
-    func buildSession() -> URLSession
-    func buildForegroundSession() -> URLSession
-    func buildBackgroundSession(identifier: String) -> URLSession
-}
 
 struct SessionBuilder: SessionBuilding {
     func buildCustomSession(with headers: [String: String]) -> URLSession {

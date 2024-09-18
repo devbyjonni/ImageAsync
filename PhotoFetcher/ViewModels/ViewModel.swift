@@ -1,8 +1,7 @@
 
 import Foundation
 
-@MainActor
-protocol ViewModel: ObservableObject {
+@MainActor protocol ViewModel: ObservableObject {
     init(dependency: DependencyContainer)
     var photos: [PicsumPhoto] { get set }
     var isShowingFavorites: Bool { get set }

@@ -1,9 +1,6 @@
+
 import Foundation
 import os.log
-
-protocol APIService {
-    func fetchData(for page: Int, pageLimit: Int, method: HTTPMethod) async throws -> [PicsumPhoto]
-}
 
 struct PhotoAPIService: APIService {
     private let fetcher: PaginatedFetching
@@ -55,5 +52,3 @@ extension LogMessages {
         apiServiceLogger.error("[\(functionName)] - Unexpected error: \(error)")
     }
 }
-
-

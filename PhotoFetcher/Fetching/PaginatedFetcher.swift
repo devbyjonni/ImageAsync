@@ -1,10 +1,6 @@
 import Foundation
 import os.log
 
-protocol PaginatedFetching {
-    func fetch(for page: Int, pageLimit: Int, method: HTTPMethod) async throws -> [PicsumPhoto]
-}
-
 struct PaginatedFetcher: PaginatedFetching {
     private let requestBuilder: RequestBuilding
     private let networkManager: NetworkManaging
