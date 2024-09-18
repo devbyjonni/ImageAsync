@@ -12,4 +12,3 @@ protocol ViewModel: ObservableObject {
     func toggleFavorite(photo: PicsumPhoto)
     func toggleFavorites()
 }
-

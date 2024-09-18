@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct PicsumPhotoFavoriteToggleButton: View {
+struct FavoriteToggleButton: View {
     var isFavorite: Bool
     var toggleAction: () -> Void
 

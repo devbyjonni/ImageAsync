@@ -67,7 +67,7 @@ struct DefaultBundleManager: BundleManaging {
 
 //MARK: BundleManager logging
 extension LogMessages {
-    static let bundleLogger = Logger(subsystem: "com.yourapp.bundle", category: "BundleManager")
+    static let bundleLogger = Logger(subsystem: "com.photofetcher.bundle", category: "BundleManager")
     
     static func bundleFileNotFound(fileName: String, functionName: String = #function) {
         bundleLogger.error("[\(functionName)] - File not found: \(fileName)")

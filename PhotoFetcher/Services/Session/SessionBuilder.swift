@@ -42,7 +42,7 @@ struct SessionBuilder: SessionBuilding {
 
 //MARK: SessionBuilder logging
 extension LogMessages {
-    static let sessionLogger = Logger(subsystem: "com.yourapp.network", category: "SessionBuilder")
+    static let sessionLogger = Logger(subsystem: "com.photofetcher.network", category: "SessionBuilder")
     
     static func sessionCustomSessionCreated(headers: [String: String], functionName: String = #function) {
         sessionLogger.info("[\(functionName)] - Custom session created with headers: \(headers, privacy: .private). Timeout: 30 seconds.")

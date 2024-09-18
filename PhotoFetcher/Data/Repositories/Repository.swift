@@ -49,7 +49,7 @@ struct PhotoRepository: PhotoDataSource {
 
 //MARK: Repository logging
 extension LogMessages {
-    static let repositoryLogger = Logger(subsystem: "com.yourapp.data", category: "Repository")
+    static let repositoryLogger = Logger(subsystem: "com.photofetcher.data", category: "Repository")
     
     static func repoAttemptingLocalDataFetch(functionName: String = #function) {
         repositoryLogger.info("[\(functionName)] - Attempting to fetch local data.")

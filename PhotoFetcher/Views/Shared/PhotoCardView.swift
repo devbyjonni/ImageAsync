@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct PicsumPhotoCardView<ViewModelType: ViewModel>: View {
+struct PhotoCardView<ViewModelType: ViewModel>: View {
     @ObservedObject var viewModel: ViewModelType
     let photo: PicsumPhoto
     
@@ -9,7 +9,7 @@ struct PicsumPhotoCardView<ViewModelType: ViewModel>: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            PicsumPhotoLoader(photo: photo)
+            PhotoLoaderView(photo: photo)
             VStack(alignment: .leading) {
                 Text(photo.author)
                     .font(.body)

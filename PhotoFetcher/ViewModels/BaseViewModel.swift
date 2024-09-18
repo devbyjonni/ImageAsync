@@ -1,3 +1,4 @@
+
 import Foundation
 
 class BaseViewModel: ViewModel {
@@ -90,7 +91,7 @@ class BaseViewModel: ViewModel {
 //MARK: ViewModel logging
 import os.log
 extension LogMessages {
-    static let viewModelLogger = Logger(subsystem: "com.yourapp.ui", category: "ViewModel")
+    static let viewModelLogger = Logger(subsystem: "com.photofetcher.ui", category: "ViewModel")
     
     // MARK: - View Model
     static func viewModelFetchSuccess(count: Int, page: Int, pageLimit: Int, functionName: String = #function) {

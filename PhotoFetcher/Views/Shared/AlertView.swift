@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct PicsumPhotoAlertView {
+struct AlertView {
     static func alert(error: ViewModelError, retryAction: @escaping () -> Void) -> Alert {
         return Alert(
             title: Text(error.title),

@@ -45,7 +45,7 @@ struct RequestBuilder: RequestBuilding {
 
 //MARK: RequestBuilder logging
 extension LogMessages {
-    static let requestBuilderLogger = Logger(subsystem: "com.yourapp.network", category: "RequestBuilder")
+    static let requestBuilderLogger = Logger(subsystem: "com.photofetcher.network", category: "RequestBuilder")
     
     static func requestBuildingRequest(page: Int, pageLimit: Int, method: String, functionName: String = #function) {
         requestBuilderLogger.info("[\(functionName)] - Building request for page: \(page), pageLimit: \(pageLimit), method: \(method)")

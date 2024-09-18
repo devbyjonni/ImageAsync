@@ -84,7 +84,7 @@ struct NetworkManager: NetworkManaging {
 
 //MARK: NetworkManager logging
 extension LogMessages {
-    static let networkLogger = Logger(subsystem: "com.yourapp.network", category: "NetworkManager")
+    static let networkLogger = Logger(subsystem: "com.photofetcher.network", category: "NetworkManager")
     
     static func networkExecutingRequest(url: String, method: String, functionName: String = #function) {
         networkLogger.info("[\(functionName)] - Executing request: \(url), Method: \(method)")

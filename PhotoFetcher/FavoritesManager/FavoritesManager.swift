@@ -1,7 +1,7 @@
+
 import Foundation
 import os.log
 
-// MARK: - FavoritesManager
 class FavoritesManager: ObservableObject {
     @Published var favorites: Set<String> = []
     
@@ -44,7 +44,7 @@ class FavoritesManager: ObservableObject {
 
 // MARK: - FavoritesManager Logging
 extension LogMessages {
-    static let favoritesLogger = Logger(subsystem: "com.yourapp.favorites", category: "FavoritesManager")
+    static let favoritesLogger = Logger(subsystem: "com.photofetcher.favorites", category: "FavoritesManager")
     
     static func favoritesLoaded(count: Int, functionName: String = #function) {
         favoritesLogger.info("[\(functionName)] - Favorites loaded. Total count: \(count)")

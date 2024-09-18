@@ -7,13 +7,9 @@ protocol APIService {
 
 struct PhotoAPIService: APIService {
     private let fetcher: PaginatedFetching
-    private let requestBuilder: RequestBuilding
-    private let networkManager: NetworkManaging
-    
-    init(fetcher: PaginatedFetching, requestBuilder: RequestBuilding, networkManager: NetworkManaging) {
+
+    init(fetcher: PaginatedFetching) {
         self.fetcher = fetcher
-        self.requestBuilder = requestBuilder
-        self.networkManager = networkManager
     }
     
     func fetchData(for page: Int, pageLimit: Int, method: HTTPMethod = .GET) async throws -> [PicsumPhoto] {
@@ -37,7 +33,7 @@ struct PhotoAPIService: APIService {
 
 //MARK: APIService logging
 extension LogMessages {
-    static let apiServiceLogger = Logger(subsystem: "com.yourapp.network", category: "APIService")
+    static let apiServiceLogger = Logger(subsystem: "com.photofetcher.network", category: "APIService")
     
     static func apiFetchingData(page: Int, pageLimit: Int, method: String, functionName: String = #function) {
         apiServiceLogger.info("[\(functionName)] - Fetching data for page \(page), pageLimit \(pageLimit), method: \(method)")

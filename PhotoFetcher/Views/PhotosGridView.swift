@@ -1,8 +1,8 @@
 
 import SwiftUI
 
-struct PicsumPhotoGridView: View {
-    @StateObject var viewModel: PicsumPhotoGridViewModel
+struct PhotosGridView: View {
+    @StateObject var viewModel: PhotosGridViewModel
     
     private let topId: String = "TOP_ID"
     private let columns: [GridItem] = Array(repeating: .init(.flexible()), count: UIDevice.current.userInterfaceIdiom == .pad ? 2 : 1)
@@ -14,7 +14,7 @@ struct PicsumPhotoGridView: View {
                     Color.clear.frame(height: 0).id(topId)
                     LazyVGrid(columns: columns, alignment: .leading) {
                         ForEach(viewModel.photos) { photo in
-                            PicsumPhotoCardView(viewModel: viewModel, photo: photo)
+                            PhotoCardView(viewModel: viewModel, photo: photo)
                         }
                     }
                 }
@@ -26,18 +26,17 @@ struct PicsumPhotoGridView: View {
             .navigationTitle("GridView")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    PicsumPhotoFavoriteToggleButton(
+                    FavoriteToggleButton(
                                isFavorite: viewModel.isShowingFavorites,
                                toggleAction: { viewModel.toggleFavorites() }
                            )
                 }
             }
             .alert(item: $viewModel.viewModelError) { error in
-                PicsumPhotoAlertView.alert(error: error) {
+                AlertView.alert(error: error) {
                    viewModel.loadData()
                 }
             }
         }
     }
 }
-

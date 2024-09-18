@@ -41,7 +41,7 @@ struct PaginatedFetcher: PaginatedFetching {
 
 //MARK: PaginatedFetcher logging
 extension LogMessages {
-    static let paginatedFetcherLogger = Logger(subsystem: "com.yourapp.network", category: "PaginatedFetcher")
+    static let paginatedFetcherLogger = Logger(subsystem: "com.photofetcher.network", category: "PaginatedFetcher")
     
     static func fetchingPage(page: Int, pageLimit: Int, method: String, functionName: String = #function) {
         paginatedFetcherLogger.info("[\(functionName)] - Fetching page \(page) with limit \(pageLimit) using method: \(method)")

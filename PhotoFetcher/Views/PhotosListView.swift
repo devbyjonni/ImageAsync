@@ -1,15 +1,15 @@
 
 import SwiftUI
 
-struct PicsumPhotoListView: View {
-    @StateObject var viewModel: PicsumPhotoListViewModel
+struct PhotosListView: View {
+    @StateObject var viewModel: PhotosListViewModel
     private let topId: String = "TOP_ID"
     
     var body: some View {
         NavigationStack {
             ScrollViewReader { proxy in
                 List(viewModel.photos) { photo in
-                    PicsumPhotoCardView(viewModel: viewModel, photo: photo)
+                    PhotoCardView(viewModel: viewModel, photo: photo)
                         .id(topId)
                         .padding(.bottom, 5)
                 }
@@ -21,18 +21,17 @@ struct PicsumPhotoListView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    PicsumPhotoFavoriteToggleButton(
+                    FavoriteToggleButton(
                                isFavorite: viewModel.isShowingFavorites,
                                toggleAction: { viewModel.toggleFavorites() }
                            )
                 }
             }
             .alert(item: $viewModel.viewModelError) { error in
-                PicsumPhotoAlertView.alert(error: error) {
+                AlertView.alert(error: error) {
                     viewModel.loadData()
                 }
             }
         }
     }
 }
-

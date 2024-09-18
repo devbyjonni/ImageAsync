@@ -1,3 +1,4 @@
+
 import SwiftUI
 import os.log
 
@@ -9,11 +10,11 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            PicsumPhotoGridView(viewModel: PicsumPhotoGridViewModel(dependency: DependencyContainer()))
+            PhotosGridView(viewModel: PhotosGridViewModel(dependency: DependencyContainer()))
                 .tabItem {
                     Label("GridView", systemImage: "photo.on.rectangle")
                 }
-            PicsumPhotoListView(viewModel: PicsumPhotoListViewModel(dependency: DependencyContainer()))
+            PhotosListView(viewModel: PhotosListViewModel(dependency: DependencyContainer()))
                 .tabItem {
                     Label("ListView", systemImage: "photo.on.rectangle")
                 }
@@ -23,7 +24,7 @@ struct MainView: View {
 
 // MARK: - MainView Logging
 extension LogMessages {
-    static let mainViewLogger = Logger(subsystem: "com.yourapp.ui", category: "MainView")
+    static let mainViewLogger = Logger(subsystem: "com.photofetcher.ui", category: "MainView")
     
     static func mainViewInit(functionName: String = #function) {
         mainViewLogger.info("[\(functionName)] - MainView has been initialized.")
